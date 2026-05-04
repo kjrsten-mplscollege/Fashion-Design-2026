@@ -1,12 +1,14 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Chalkboard', sans-serif;
+  font-size: 1.5rem;
   background: #0c0a2e;
   color: white;
   text-align: center;
   overflow-x: hidden;
 }
 
+/* Floating background */
 .bg-icons {
   position: fixed;
   inset: 0;
@@ -17,10 +19,9 @@ body {
 
 .bg-icons img {
   position: absolute;
-  will-change: transform;
   animation: float var(--duration) ease-in-out infinite;
   animation-delay: var(--delay);
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.15));
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
 }
 
 @keyframes float {
@@ -31,22 +32,25 @@ body {
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 
+/* Hero */
 .hero {
   padding: 60px 20px 30px;
 }
 
 .hero h1 {
-  font-family: "Gurenge Bubblegum";
-  font-size: 5rem;
-  margin-bottom: 10px;
+  font-family: "Gurenge Bubblegum", cursive;
+  font-size: 9rem;
+  margin: 0;
   font-weight: 100;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  opacity: 0.85;
+  font-size: 1.5rem;
+  margin-top: 0;
+  opacity: 0.9;
 }
 
+/* Event info */
 .event-info {
   background: #15124a;
   padding: 30px 20px;
@@ -55,27 +59,24 @@ body {
   border-radius: 12px;
 }
 
-.event-info h2 {
-  margin-bottom: 15px;
-}
-
 .free {
   margin-top: 10px;
   font-weight: bold;
   color: #a29bfe;
 }
 
+/* Designers */
 .designers {
   padding: 40px 20px;
 }
 
 .designers h2 {
-  font-family: "Gurenge Bubblegum";
-  margin-bottom: 20px;
+  font-family: "Gurenge Bubblegum", cursive;
   font-size: 5rem;
-  font-weight: normal;
+  margin-bottom: 20px;
 }
 
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -84,27 +85,37 @@ body {
   margin: auto;
 }
 
+/* Card */
 .designer {
   position: relative;
   background: white;
-font-family: "Chalkboard";
-font-size: 1.5rem;
-border-radius: 6px;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  font-family: "Chalkboard", sans-serif;
 }
 
 .designer img {
   width: 100%;
-  height: 280px;
+  height: 340px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  border-radius: 6px 6px 0 0;
 }
 
+.designer p {
+  margin: 10px 0 20px;
+}
+
+/* Hover */
 .designer:hover {
   transform: translateY(-6px) scale(1.03);
   background: #6c63ff;
+  color: white;
 }
 
+/* Overlay */
 .designer::after {
   content: "View Portfolio";
   position: absolute;
@@ -123,18 +134,28 @@ border-radius: 6px;
   opacity: 1;
 }
 
+/* Footer */
 footer {
   padding: 30px;
   font-size: 0.9rem;
   opacity: 0.6;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
   .hero h1 {
     font-size: 3rem;
   }
 
+  .designers h2 {
+    font-size: 3rem;
+  }
+
   .bg-icons img {
-    width: 40px !important;
+    width: 40px;
   }
 }
