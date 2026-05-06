@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Gurenge Bubblegum";
+  src: fontUrl("img/Gurenge Bubblegum.otf");
+}
+
 body {
   margin: 0;
   font-family: 'Chalkboard', sans-serif;
