@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Gurenge Bubblegum";
-  src: fontUrl("img/Gurenge Bubblegum.otf");
+  src: url("img/Gurenge Bubblegum.otf");
 }
 
 body {
@@ -11,6 +11,11 @@ body {
   color: white;
   text-align: center;
   overflow-x: hidden;
+}
+
+iframe {
+  width: 80%;
+  min-height: 300px;
 }
 
 /* Floating background */
@@ -79,6 +84,25 @@ body {
   font-family: "Gurenge Bubblegum", cursive;
   font-size: 5rem;
   margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.thanks {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.fbox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fbox p {
+  display: inline-block;
+  min-width: 200px;
 }
 
 /* Grid */
@@ -104,7 +128,7 @@ body {
 
 .designer img {
   width: 100%;
-  height: 340px;
+  height: 450px;
   object-fit: cover;
   border-radius: 6px 6px 0 0;
 }
@@ -162,5 +186,10 @@ footer {
 
   .bg-icons img {
     width: 40px;
+  }
+
+  iframe {
+  width: 90%;
+  min-height: 180px;
   }
 }
